@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('*******Задание 1*******')
+        let digid = +prompt('Задание 1. Введите число:');
+        if ( 1 <= digid & digid <= 10) {
+            if (digid %2 == 0) {
+                alert('TRUE')
+                console.log(`Введеное число - [${digid}], результат - TRUE`);
+            }
+            else{
+                alert('FALSE')
+                console.log(`Введеное число - [${digid}], результат - FALSE`);
+            }
+        }
+        else{
+            alert('FALSE')
+            console.log(`Введеное число - [${digid}], результат - FALSE`);
+        }
+    </script>
+
+    <script>
+        console.log('*******Задание 2*******')
+        digid1 = +prompt('Задание 2. Введите первое число:');
+        let digid2 = +prompt('Задание 2. Введите второе число:');
+        if(digid1 > digid2){
+            [digid1,digid2] = [digid2,digid1];
+        }
+        for (digid1; digid1 <= digid2; digid1++) {
+            if((Math.log(digid1)/Math.log(2)) % 1 === 0){
+                console.log(digid1);
+            }
+        }
+    </script>
+
+
+    <script>
+        console.log('*******Задание 3*******')
+        let sum = +prompt('Задание 3. Введите число:');
+        let flag = true;
+        
+        do{
+            if(confirm('Задание 3. Хотите ввести еще число?')){
+                sum += +prompt('Введите число:');
+            }
+            else{
+                flag = false;
+            }
+        }while(flag == true)
+        console.log(`Сумма введеных чисел равна: ${sum}`);
+    </script>
+
+    <script>
+        console.log('*******Задание 4*******')
+        let userString = [] = prompt('Задание 4. Введите строку:')
+        let resString ='';
+        let flag2 = false;
+        for(let i =0; i < userString.length; i++){
+            if(userString[i] == '1' | userString[i] == ' '){
+                flag = true;
+            }
+            else{
+                resString += userString[i];
+            }
+        }
+        if(flag == false){
+            alert('Задание 4. В введеной строке не было символов 1 и пробелов')
+            console.log(`Итоговая строка:${resString}`);
+        }
+        else{
+           console.log(`Итоговая строка:${resString}`); 
+        }
+    </script>
+
+    <script>
+        console.log('*******Задание 5*******')
+        let digid3;
+        for(let i = 0; i <= 10; i++){
+            digid = Math.floor(Math.random() * (20 - 0 + 1)) + 0;
+            if(digid % 3 != 0 | digid == 0){
+               console.log(digid); 
+            }
+        }
+    </script>
+</body>
+</html>
